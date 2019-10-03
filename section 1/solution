@@ -1,0 +1,160 @@
+==========================1===========================
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package problems;
+
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author STUDENT
+ */
+public class Problems {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int sum = 0;
+        double avg = 0;
+        Scanner sc = new Scanner (System.in);
+        for (int i = 0; i < 3;i++)
+        {
+            System.out.print("Enter num " + (i+1) + ":");
+            int n = sc.nextInt();
+            System.out.println();
+            sum += n;
+        }
+        avg = sum / 3.0;
+        System.out.println("The Sum is " + sum);
+        System.out.println("The Average is " + avg);
+    }
+    
+}
+
+==========================2==========================
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package problems;
+
+import java.util.*;
+
+
+/**
+ *
+ * @author STUDENT
+ */
+public class Problems {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner (System.in);
+        System.out.println("your Equation is C = sqrt(pow(a,2) + pow(b,2) - 2abcos(y)");
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.println();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        System.out.println();
+        System.out.print("Enter the value of y :");
+        int y = sc.nextInt();
+        System.out.println();
+        double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) - 2 * a * b * Math.cos(y));
+        System.out.print("C = " + c);
+        System.out.println();
+    }
+    
+}
+
+==========================3==========================
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package problems;
+
+import java.util.*;
+
+
+/**
+ *
+ * @author STUDENT
+ */
+public class Problems {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    /*
+     * an algorithm that will output the account balance each year for 3 years given the initial balance and interest rate. The interest is calculated for one year by multiplying the current account balance by the interest
+     * rate and adding this to the balance.
+    */
+        Scanner sc = new Scanner (System.in);
+        double B = 0, I = 0;
+        System.out.print("Enter your balance: ");
+        B = sc.nextInt();
+        System.out.println();
+        System.out.print("Enter your interest: ");
+        I = sc.nextInt();
+        System.out.println();
+        for (int i = 0; i < 3;i++)
+        {
+            double t = B * (I/100);
+            B += t;
+        }
+        System.out.println("your balance after 3 yrs will be " + B);
+        
+    }
+    
+}
+
+==========================4============================
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package problems;
+
+import java.util.*;
+
+
+/**
+ *
+ * @author STUDENT
+ */
+public class Problems {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    /*
+     * Given a deck of 1000 cards, you would like to pick the nth card where n is a random number.
+    */
+       int x= (int)(Math.random() * (1000 + 1));
+       System.out.println(x);
+
+    }
+    
+}
