@@ -1,0 +1,74 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package lab.pkg2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author student
+ */
+public class Lab2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // Lab problem 2
+        long startTime = System.currentTimeMillis(); 
+        Scanner sc = new Scanner (System.in);
+        int A,B,t,count=0;
+        char check;
+        System.out.println("              Welcome to Subtraction Quiz Example");
+        do{
+            for (int i = 0; i < 10; i++)
+            {
+                A = (int) (Math.random() * 100);
+                B = (int) (Math.random() * 100);
+                if (A < B){
+                    t = A;
+                    A = B;
+                    B = t;
+                } 
+                System.out.println("What is " + A + " - " + B + "?");
+                int C = sc.nextInt();
+                if (C == (A-B)){
+                    System.out.println("You are correct!");
+                    count++;
+                }
+            }
+        
+            switch(count){
+                case 10:
+                case 9:
+                case 8:
+                    System.out.println("Your grade is "+"excellent");
+                    break;
+                case 7:
+                case 6:
+                    System.out.println("Your grade is "+"very good");
+                    break;
+                case 5:
+                case 4:
+                    System.out.println("Your grade is "+"good");
+                    break;
+                case 3:
+                case 2:
+                case 1:
+                default:
+                    System.out.println("Your grade is "+"poor");
+                    break;
+            }
+            long endTime = System.currentTimeMillis();
+            System.out.println("You achieved the test time is " + ((endTime - startTime)/1000));
+            System.out.print("Do you want another exam(Y/N): ");
+            check = sc.next().charAt(0);
+        }while(check == 'y');
+        System.out.println("Thank You");
+    }
+    
+}
