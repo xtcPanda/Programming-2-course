@@ -20,7 +20,8 @@ public class Lab21 {
     public static void main(String[] args) {
         // Lab 2 problem 1
         Scanner sc = new Scanner (System.in);
-        int check,count = 0;
+        String check;
+        int count = 0;
         float sum = 0,num;
         double avg = 0, sd = 0, sumDifSq = 0 , def = 0;
         do{
@@ -30,14 +31,16 @@ public class Lab21 {
             System.out.println();
             
             sum += num;
+            
+            System.out.print("Enter 's' to stop ");
+            check = sc.next();
+        }while(check.charAt(0) != 's');
+        
             avg = sum / count;
             def = num - avg;
             sumDifSq += Math.pow(def,2);
             sd += sumDifSq / (count-1);
             
-            System.out.print("Enter '-999' to stop ");
-            check = sc.nextInt();
-        }while(check != -999);
         System.out.println("the count is " + count);
         System.out.println("the average is " + avg);
         System.out.println("the standard deviation is " + Math.sqrt(sd));
