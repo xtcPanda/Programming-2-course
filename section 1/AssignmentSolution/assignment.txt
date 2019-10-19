@@ -1,0 +1,255 @@
+========================== 1.1 ===============================
+
+package assignment;
+
+import java.util.Scanner;
+
+/*
+ * @author moaaz
+ */
+public class Assignment {
+
+
+    public static void main(String[] args) {
+
+        // Swap with a temporary var
+
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println();
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        System.out.println();
+        
+        int t = a;
+        a = b;
+        b = t;
+        
+        System.out.println("a became " + a + ", b became " + b);
+    }
+    
+}
+
+========================== 1.2 ===============================
+
+
+package assignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moaaz
+ */
+public class Assignment {
+
+    
+    
+    public static void main(String[] args) {
+        // Swap without a temporary var
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println();
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        System.out.println();
+        
+       a = a + b;
+       b = a - b; // b = a! 
+       a = a - b; 
+// b turned to a so now we r subtracting the new b from the old big a with a + b so a turns to b
+
+/*
+* we can do it by multiplication too and it will WORK !
+* a = a * b;
+* b = a / b;
+* a = a / b;
+*/
+        
+        System.out.println("a became " + a + ", b became " + b);
+    }
+    
+}
+
+// how to pass by refrence in java ?!! and where is my pointers ?!
+
+========================== 2 ===============================
+
+
+package assignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moaaz
+ */
+public class Assignment {
+
+    
+    
+    
+    public static void main(String[] args) {
+        // calculating the BMI w with kg , h with meter
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Type in your weight: ");
+        double w = sc.nextDouble();
+        System.out.println();
+        System.out.print("Type in your Height: ");
+        double h = sc.nextDouble();
+        System.out.println();
+        
+        double BMI = w / Math.pow((h/100),2);
+        System.out.println("your BMI = " + BMI);
+    }
+    
+}
+
+========================== 3 ===============================
+
+// there is no unsigned in java ?
+
+
+package assignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moaaz
+ */
+public class Assignment {
+
+    
+    
+    
+    public static void main(String[] args) {
+        // calculating the area
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter the Length of garden: ");
+        int L = sc.nextInt();
+        System.out.println();
+        System.out.print("Enter the width of garden: ");
+        int W = sc.nextInt();
+        System.out.println();
+        
+        System.out.println("The area of the garden will be " + (L*W) + " and you can plant " + (L*W/50) + " Trees." );
+        
+        
+    }
+    
+}
+
+========================== 4 ===============================
+
+
+package assignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moaaz
+ */
+public class Assignment {
+
+   
+    public static void main(String[] args) {
+        // Pythagorean theorem
+        
+        Scanner sc = new Scanner (System.in);
+        System.out.println("a = m^2 - n^2 /nb = 2 * m * n /nc = sqrt(a^2 + b^2)");
+        System.out.print("Enter m >");
+        double m = sc.nextDouble();
+        System.out.println();
+        System.out.print("Enter n >");
+        double n = sc.nextDouble();
+        System.out.println();
+        System.out.println("a = m^2 - n^2 = " + (Math.pow(m, 2) - Math.pow(n, 2)));
+        System.out.println("b = 2 * m * n = " + (2 * m * n));
+        System.out.println("c = sqrt(a^2 + b^2) = " + Math.sqrt(Math.pow(m, 2) + Math.pow(n, 2)));
+    }
+    
+}
+
+========================== 5 ===============================
+
+// cant i change main to int in java ? it says ur missing ur main if i do !
+
+
+package assignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moaaz
+ */
+public class Assignment {
+
+   
+    public static void main(String[] args) {
+        // feeding the dogs
+        // 100 bone, 3 dogs : Dipsy= 2 Laa-Laa ^ Laa-Laa= 1.5 Po
+        
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter How many Bones Po ate out of 100 >");
+        double P = sc.nextDouble();
+        System.out.println();
+        double L = P * 1.5;
+        double D = L * 2;
+        if ((P+L+D) <= 100)
+        {
+            System.out.println("Dipsy ate " + D + ", Laa-Laa ate " + L + " Po ate " + P);
+        }else
+        {
+            System.out.println("Po gone wild and hungry dude !");
+        }
+    }
+    
+}
+
+
+========================= 6 ================================
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author mo3az
+ */
+public class JavaApplication2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // the sum of the 3-digits in the 3-digits number
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter a 3-digit num: ");
+        int n = sc.nextInt(), d, sum = 0;
+        if (n < 1000)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                d = n % 10;
+                sum += d;
+                n /= 10;
+            }
+            System.out.println("the sum of the digits is " + sum);
+        }else
+        {
+            System.out.println("Entered an invalid number sorry bye.");
+        }
+    }
+    
+}
